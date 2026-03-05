@@ -1,0 +1,19 @@
+[
+  {
+    "id": "proj-1",
+    "title": "hamzabenyazid.dev",
+    "description": "My personal professional website — a central hub to manage my professional presence, showcase my work, and keep my information in sync across platforms.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "githubUrl": "https://github.com/HamzaBenyazid/hamzabenyazid.dev",
+    "liveUrl": "https://hamzabenyazid.dev",
+    "featured": true
+  },
+  {
+    "id": "proj-2",
+    "title": "Open Source Contributions",
+    "description": "Various contributions to open-source projects including bug fixes, feature additions, and documentation improvements.",
+    "technologies": ["Python", "JavaScript", "Go"],
+    "githubUrl": "https://github.com/HamzaBenyazid",
+    "featured": false
+  }
+]

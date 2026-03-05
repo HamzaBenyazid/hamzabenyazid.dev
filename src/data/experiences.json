@@ -1,0 +1,24 @@
+[
+  {
+    "id": "exp-1",
+    "title": "Software Engineer",
+    "company": "Tech Company",
+    "location": "Remote",
+    "startDate": "2022-01",
+    "endDate": null,
+    "current": true,
+    "description": "Developing and maintaining scalable backend services and APIs. Collaborating with cross-functional teams to deliver high-quality software solutions.",
+    "technologies": ["TypeScript", "Node.js", "React", "PostgreSQL", "Docker"]
+  },
+  {
+    "id": "exp-2",
+    "title": "Full Stack Developer",
+    "company": "Startup",
+    "location": "Casablanca, Morocco",
+    "startDate": "2020-06",
+    "endDate": "2021-12",
+    "current": false,
+    "description": "Built and shipped full-stack web applications from ideation to production. Worked closely with product and design teams.",
+    "technologies": ["React", "Node.js", "MongoDB", "Express", "AWS"]
+  }
+]
