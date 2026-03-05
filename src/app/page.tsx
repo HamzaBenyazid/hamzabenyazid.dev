@@ -8,7 +8,17 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen">
+    <main className="relative min-h-screen overflow-hidden">
+      {/* Background blobs */}
+      <div className="fixed inset-0 pointer-events-none -z-10">
+        <div className="blob w-[600px] h-[600px] bg-neon-cyan/10 top-[-200px] left-[-200px]" />
+        <div className="blob w-[500px] h-[500px] bg-neon-purple/10 top-[40%] right-[-150px]" />
+        <div className="blob w-[400px] h-[400px] bg-neon-pink/8 bottom-[-100px] left-[30%]" />
+      </div>
+
+      {/* Grid overlay */}
+      <div className="fixed inset-0 grid-bg pointer-events-none -z-10" />
+
       <Navbar />
       <Hero />
       <About />
