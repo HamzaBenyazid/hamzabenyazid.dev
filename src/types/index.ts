@@ -18,6 +18,12 @@ export interface Experience {
   technologies: string[];
 }
 
+export interface ProjectBadge {
+  imageUrl: string;
+  href: string;
+  label: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -27,6 +33,8 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
   image?: string;
+  badges?: ProjectBadge[];
+  comingSoon?: boolean;
 }
 
 export interface Profile {
@@ -35,6 +43,7 @@ export interface Profile {
   bio: string;
   location: string;
   email: string;
+  secondaryEmail?: string;
   avatarUrl: string;
   resumeUrl?: string;
 }

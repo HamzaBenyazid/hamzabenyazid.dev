@@ -8,44 +8,31 @@ const socialLinks = social as SocialLink[];
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
-      <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl">
+      <nav className="glass rounded-2xl px-6 h-14 flex items-center justify-between glow-cyan">
         <Link
           href="/"
-          className="text-lg font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          className="font-mono text-sm font-bold text-neon-cyan tracking-wider hover:glow-text-cyan transition-all"
         >
-          {profile.name}
+          &lt;{profile.name.split(" ")[0].toLowerCase()} /&gt;
         </Link>
 
         <div className="flex items-center gap-6">
-          <div className="hidden sm:flex items-center gap-6 text-sm font-medium">
-            <a
-              href="#about"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#experience"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Experience
-            </a>
-            <a
-              href="#projects"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Contact
-            </a>
+          <div className="hidden sm:flex items-center gap-1 text-xs font-mono">
+            {["about", "experience", "projects", "contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                className="px-3 py-1.5 rounded-lg text-text-secondary hover:text-neon-cyan hover:bg-neon-cyan/5 transition-all"
+              >
+                .{item}()
+              </a>
+            ))}
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="w-px h-5 bg-border-subtle hidden sm:block" />
+
+          <div className="flex items-center gap-2">
             {socialLinks.slice(0, 2).map((link) => (
               <a
                 key={link.platform}
@@ -53,7 +40,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.platform}
-                className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="p-1.5 rounded-lg text-text-secondary hover:text-neon-cyan hover:bg-neon-cyan/5 transition-all"
               >
                 <SocialIcon icon={link.icon} />
               </a>

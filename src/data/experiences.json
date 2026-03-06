@@ -1,24 +1,35 @@
 [
   {
     "id": "exp-1",
-    "title": "Software Engineer",
-    "company": "Tech Company",
-    "location": "Remote",
-    "startDate": "2022-01",
+    "title": "Software Engineer — JDK Team",
+    "company": "Oracle",
+    "location": "Casablanca, Morocco",
+    "startDate": "2023-11",
     "endDate": null,
     "current": true,
-    "description": "Developing and maintaining scalable backend services and APIs. Collaborating with cross-functional teams to deliver high-quality software solutions.",
-    "technologies": ["TypeScript", "Node.js", "React", "PostgreSQL", "Docker"]
+    "description": "Full-time software engineer on the JDK team at Oracle. Working on Computer Engineering and Technology Development in a hybrid setup.",
+    "technologies": ["Java", "JDK", "Computer Engineering", "Technology Development"]
   },
   {
     "id": "exp-2",
-    "title": "Full Stack Developer",
-    "company": "Startup",
-    "location": "Casablanca, Morocco",
-    "startDate": "2020-06",
-    "endDate": "2021-12",
+    "title": "Research Assistant",
+    "company": "Oracle",
+    "location": "Casablanca-Settat, Morocco",
+    "startDate": "2023-03",
+    "endDate": "2023-10",
     "current": false,
-    "description": "Built and shipped full-stack web applications from ideation to production. Worked closely with product and design teams.",
-    "technologies": ["React", "Node.js", "MongoDB", "Express", "AWS"]
+    "description": "Enhancing Software Quality and Efficiency of Graph Studio through Automation and Continuous Integration.",
+    "technologies": ["English", "JSON", "Automation", "CI/CD"]
+  },
+  {
+    "id": "exp-3",
+    "title": "Research Assistant",
+    "company": "Oracle",
+    "location": "Casablanca-Settat, Morocco",
+    "startDate": "2022-07",
+    "endDate": "2022-10",
+    "current": false,
+    "description": "Creating, building, implementing, and documenting a microservice application that serves as a comprehensive guide for the Micronaut framework. The application is deployed on Kubernetes in the cloud.",
+    "technologies": ["Java", "Micronaut", "Kubernetes", "Docker", "Microservices", "Unit Testing"]
   }
 ]

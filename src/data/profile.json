@@ -1,8 +1,9 @@
 {
-  "name": "Hamza Benyazid",
-  "title": "Software Engineer",
-  "bio": "Passionate software engineer with expertise in building scalable web applications and distributed systems. I enjoy solving complex problems and turning ideas into real-world solutions.",
-  "location": "Morocco",
+  "name": "Hamza Ben Yazid",
+  "title": "Software Engineer · Problem Solver",
+  "bio": "Software Engineer on the JDK team at Oracle. Creator of Live Variables — a popular Obsidian plugin with thousands of downloads. Currently building CrystalFlow, a modern declarative & extensible framework for visual workflow editors.",
+  "location": "Casablanca, Morocco",
   "email": "contact@hamzabenyazid.dev",
-  "avatarUrl": "/avatar.png"
+  "secondaryEmail": "hamzabyazid@gmail.com",
+  "avatarUrl": "/me.jpg"
 }

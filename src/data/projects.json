@@ -1,19 +1,79 @@
 [
   {
+    "id": "proj-2",
+    "title": "CrystalFlow",
+    "description": "A modern, declarative & extensible framework for building visual workflow editors. Simply define your nodes, and CrystalFlow automatically detects them, generates the UI, and handles all execution logic.",
+    "technologies": ["TypeScript"],
+    "image": "/projects/crystalflow-icon-blue-dark.png",
+    "featured": true,
+    "comingSoon": true
+  },
+  {
     "id": "proj-1",
-    "title": "hamzabenyazid.dev",
-    "description": "My personal professional website — a central hub to manage my professional presence, showcase my work, and keep my information in sync across platforms.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
-    "githubUrl": "https://github.com/HamzaBenyazid/hamzabenyazid.dev",
-    "liveUrl": "https://hamzabenyazid.dev",
+    "title": "Live Variables",
+    "description": "A popular Obsidian plugin with thousands of downloads. Define variables once in your note's frontmatter and reuse them everywhere — with dynamic queries, cross-note sync, and a visual form interface.",
+    "technologies": ["TypeScript", "Obsidian"],
+    "githubUrl": "https://github.com/HamzaBenyazid/Live-variables",
+    "featured": true,
+    "image": "/projects/live-variables.png",
+    "badges": [
+      {
+        "imageUrl": "https://img.shields.io/github/downloads/HamzaBenyazid/obsidian-live-variables/total?color=%233DDC84&logo=github&logoColor=%23fff&style=flat",
+        "href": "https://github.com/HamzaBenyazid/Live-variables/releases",
+        "label": "GitHub Downloads"
+      },
+      {
+        "imageUrl": "https://img.shields.io/badge/dynamic/json?logo=obsidian&color=%23483699&label=Obsidian%20Downloads&query=%24%5B%22live-variables%22%5D.downloads&url=https%3A%2F%2Fraw.githubusercontent.com%2Fobsidianmd%2Fobsidian-releases%2Fmaster%2Fcommunity-plugin-stats.json",
+        "href": "https://obsidian.md/plugins?search=live%20variables",
+        "label": "Obsidian Downloads"
+      },
+      {
+        "imageUrl": "https://img.shields.io/github/stars/HamzaBenyazid/Live-variables?style=flat&color=yellow",
+        "href": "https://github.com/HamzaBenyazid/Live-variables/stargazers",
+        "label": "Stars"
+      }
+    ]
+  },
+  {
+    "id": "proj-7",
+    "title": "FloTable",
+    "description": "Powerful, responsive table components for React with a built-in views system, advanced filtering, infinite scroll, and mobile optimization. Built on Ant Design Pro with full TypeScript support.",
+    "technologies": ["TypeScript", "React", "Ant Design"],
+    "githubUrl": "https://github.com/Fladeed/FloTable",
+    "liveUrl": "https://flo-table.vercel.app",
     "featured": true
   },
   {
-    "id": "proj-2",
-    "title": "Open Source Contributions",
-    "description": "Various contributions to open-source projects including bug fixes, feature additions, and documentation improvements.",
-    "technologies": ["Python", "JavaScript", "Go"],
-    "githubUrl": "https://github.com/HamzaBenyazid",
+    "id": "proj-5",
+    "title": "JavaRIG",
+    "description": "A lightweight Java library to generate random objects (POJOs, collections, etc.) using the Reflection API — perfect for testing and prototyping.",
+    "technologies": ["Java", "Reflection API"],
+    "githubUrl": "https://github.com/oubaydos/javaRIG",
+    "featured": true
+  },
+  {
+    "id": "proj-4",
+    "title": "DevOpsify",
+    "description": "A Spring Boot + React assistance platform that helps you bootstrap a DevOps project using open-source tools — Git, Docker, Jenkins, and more.",
+    "technologies": ["Java", "Spring Boot", "React", "Docker", "Jenkins"],
+    "githubUrl": "https://github.com/oubaydos/DevOpsify",    "image": "/projects/devopsify.png",    "featured": true
+  },
+  {
+    "id": "proj-3",
+    "title": "Minesweeper for Obsidian",
+    "description": "Classic Minesweeper playable right inside Obsidian — because why not!",
+    "technologies": ["TypeScript", "Obsidian"],
+    "githubUrl": "https://github.com/HamzaBenyazid/Minesweeper",
+    "featured": false
+  },
+
+  {
+    "id": "proj-6",
+    "title": "hamzabenyazid.dev",
+    "description": "My personal portfolio website — a central hub to showcase my work and keep my information up to date.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "githubUrl": "https://github.com/HamzaBenyazid/hamzabenyazid.dev",
+    "liveUrl": "https://hamzabenyazid.dev",
     "featured": false
   }
 ]
