@@ -53,17 +53,19 @@ export default function MobileMenu() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-48 glass rounded-2xl py-2 px-2 z-50 glow-cyan">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
-              onClick={() => setOpen(false)}
-              className="block px-4 py-2.5 rounded-xl text-sm font-mono text-text-secondary hover:text-neon-cyan hover:bg-neon-cyan/5 transition-all"
-            >
-              .{item}()
-            </a>
-          ))}
+        <div className="absolute right-0 top-full mt-2 w-48 rounded-2xl z-50 glow-cyan border border-border-glow overflow-hidden" style={{ background: "rgba(18, 24, 32, 0.97)" }}>
+          <div className="relative py-2 px-2">
+            {NAV_ITEMS.map((item) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                onClick={() => setOpen(false)}
+                className="block px-4 py-2.5 rounded-xl text-sm font-mono text-text-secondary hover:text-neon-cyan hover:bg-neon-cyan/5 transition-all"
+              >
+                .{item}()
+              </a>
+            ))}
+          </div>
         </div>
       )}
     </div>

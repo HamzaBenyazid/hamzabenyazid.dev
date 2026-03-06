@@ -10,7 +10,7 @@ const socialLinks = social as SocialLink[];
 export default function Navbar() {
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl">
-      <nav className="glass rounded-2xl px-6 h-14 flex items-center justify-between glow-cyan">
+      <nav className="rounded-2xl px-6 h-14 flex items-center justify-between glow-cyan border border-border-glow" style={{ background: "rgba(13, 17, 23, 0.75)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)" }}>
         <Link
           href="/"
           className="font-mono text-sm font-bold text-neon-cyan tracking-wider hover:glow-text-cyan transition-all"
