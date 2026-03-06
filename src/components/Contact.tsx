@@ -1,4 +1,5 @@
 import profile from "@/data/profile.json";
+import { HiEnvelope, HiInboxArrowDown, HiMapPin } from "react-icons/hi2";
 import social from "@/data/social.json";
 import { SocialLink } from "@/types";
 import SocialIcon from "@/components/SocialIcon";
@@ -21,7 +22,7 @@ export default function Contact() {
 
         {/* Big CTA card */}
         <div className="glass rounded-2xl p-8 sm:p-12 gradient-border glow-purple text-center mb-8">
-          <div className="text-5xl mb-6">📬</div>
+          <div className="mb-6 flex justify-center text-neon-purple"><HiInboxArrowDown className="w-14 h-14" /></div>
           <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
             Let&apos;s build something{" "}
             <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
@@ -62,7 +63,7 @@ export default function Contact() {
             href={`mailto:${profile.email}`}
             className="glass rounded-2xl p-6 gradient-border group hover:glow-cyan transition-all"
           >
-            <div className="text-2xl mb-3">📧</div>
+            <div className="mb-3 text-neon-cyan"><HiEnvelope className="w-7 h-7" /></div>
             <div className="font-mono text-xs text-text-muted mb-1 uppercase tracking-wider">
               Email
             </div>
@@ -71,9 +72,25 @@ export default function Contact() {
             </div>
           </a>
 
+          {/* Secondary email card */}
+          {profile.secondaryEmail && (
+            <a
+              href={`mailto:${profile.secondaryEmail}`}
+              className="glass rounded-2xl p-6 gradient-border group hover:glow-cyan transition-all"
+            >
+              <div className="mb-3 text-neon-cyan"><HiEnvelope className="w-7 h-7" /></div>
+              <div className="font-mono text-xs text-text-muted mb-1 uppercase tracking-wider">
+                Alt Email
+              </div>
+              <div className="text-text-primary group-hover:text-neon-cyan transition-colors text-sm font-medium truncate">
+                {profile.secondaryEmail}
+              </div>
+            </a>
+          )}
+
           {/* Location card */}
           <div className="glass rounded-2xl p-6 gradient-border">
-            <div className="text-2xl mb-3">📍</div>
+            <div className="mb-3 text-neon-purple"><HiMapPin className="w-7 h-7" /></div>
             <div className="font-mono text-xs text-text-muted mb-1 uppercase tracking-wider">
               Location
             </div>

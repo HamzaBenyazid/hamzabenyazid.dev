@@ -1,5 +1,7 @@
+import Image from "next/image";
 import projects from "@/data/projects.json";
 import { Project } from "@/types";
+import { HiFolderOpen, HiStar, HiClock } from "react-icons/hi2";
 
 const projectList = projects as Project[];
 
@@ -29,21 +31,38 @@ export default function Projects() {
               {/* Card header accent bar */}
               <div className="h-1 w-full bg-gradient-to-r from-neon-cyan via-neon-purple to-neon-pink opacity-50 group-hover:opacity-100 transition-opacity" />
 
-              <div className="p-6 sm:p-8">
+              <div className="relative z-10 p-6 sm:p-8">
                 <div className="flex items-start justify-between gap-4 mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-neon-purple/10 border border-neon-purple/20 flex items-center justify-center text-neon-purple text-lg">
-                      📂
+                    <div className="w-10 h-10 rounded-xl bg-neon-purple/10 border border-neon-purple/20 flex items-center justify-center text-neon-purple overflow-hidden">
+                      {project.image ? (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={40}
+                          height={40}
+                          className="object-contain w-full h-full"
+                        />
+                      ) : (
+                        <HiFolderOpen className="w-5 h-5" />
+                      )}
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-text-primary group-hover:text-neon-cyan transition-colors">
                         {project.title}
                       </h3>
+                      <div className="flex items-center gap-2">
                       {project.featured && (
                         <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-pink">
-                          ★ featured
+                          <HiStar className="w-3 h-3" /> featured
                         </span>
                       )}
+                      {project.comingSoon && (
+                        <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-cyan">
+                          <HiClock className="w-3 h-3" /> coming soon to open-source
+                        </span>
+                      )}
+                      </div>
                     </div>
                   </div>
 
@@ -91,9 +110,26 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <p className="text-text-secondary text-sm leading-relaxed mb-6">
+                <p className="text-text-secondary text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
+
+                {project.badges && project.badges.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.badges.map((badge) => (
+                      <a
+                        key={badge.label}
+                        href={badge.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={badge.label}
+                      >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={badge.imageUrl} alt={badge.label} height={20} />
+                      </a>
+                    ))}
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (

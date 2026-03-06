@@ -1,7 +1,10 @@
+import Image from "next/image";
 import profile from "@/data/profile.json";
+import { HiBolt, HiRocketLaunch, HiSparkles, HiCpuChip, HiMapPin } from "react-icons/hi2";
 
 const skills = [
   { name: "TypeScript", color: "text-neon-cyan" },
+  { name: "Java", color: "text-neon-pink" },
   { name: "React", color: "text-neon-cyan" },
   { name: "Next.js", color: "text-neon-purple" },
   { name: "Node.js", color: "text-neon-cyan" },
@@ -12,10 +15,10 @@ const skills = [
 ];
 
 const stats = [
-  { label: "Years of Experience", value: "3+", icon: "⚡" },
-  { label: "Projects Completed", value: "20+", icon: "🚀" },
-  { label: "Open Source Contributions", value: "50+", icon: "💎" },
-  { label: "Technologies", value: "15+", icon: "🔧" },
+  { label: "Years of Experience", value: "3+", icon: HiBolt },
+  { label: "Projects Completed", value: "20+", icon: HiRocketLaunch },
+  { label: "Open Source Contributions", value: "50+", icon: HiSparkles },
+  { label: "Technologies", value: "15+", icon: HiCpuChip },
 ];
 
 export default function About() {
@@ -42,8 +45,8 @@ export default function About() {
             </p>
             <p className="text-text-secondary text-lg leading-relaxed">
               I&apos;m based in{" "}
-              <span className="text-neon-cyan font-medium">
-                📍 {profile.location}
+              <span className="text-neon-cyan font-medium inline-flex items-center gap-1">
+                <HiMapPin className="w-4 h-4" /> {profile.location}
               </span>
               . When I&apos;m not coding, I enjoy exploring new technologies,
               contributing to open source, and continuously learning.
@@ -53,8 +56,15 @@ export default function About() {
           {/* Status card */}
           <div className="glass rounded-2xl p-8 gradient-border flex flex-col justify-center items-center text-center">
             <div className="relative mb-4">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-neon-cyan/20 to-neon-purple/20 flex items-center justify-center border border-neon-cyan/20">
-                <span className="text-3xl">👨‍💻</span>
+              <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-neon-cyan/30 ring-2 ring-neon-purple/20">
+                <Image
+                  src="/me.jpg"
+                  alt={profile.name}
+                  width={96}
+                  height={96}
+                  className="object-cover w-full h-full"
+                  priority
+                />
               </div>
               <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-surface-raised border-2 border-neon-cyan flex items-center justify-center">
                 <span className="relative flex h-2 w-2">
@@ -73,7 +83,7 @@ export default function About() {
               key={stat.label}
               className="glass rounded-2xl p-6 gradient-border group hover:glow-cyan transition-all"
             >
-              <div className="text-2xl mb-3">{stat.icon}</div>
+              <div className="mb-3 text-neon-cyan"><stat.icon className="w-6 h-6" /></div>
               <div className="text-3xl font-bold bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent mb-1">
                 {stat.value}
               </div>

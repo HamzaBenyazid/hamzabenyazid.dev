@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-20 relative"
+      className="min-h-screen flex items-center justify-center pt-10 relative"
     >
       <div className="max-w-5xl mx-auto px-6 py-20 w-full">
         {/* Terminal-style card */}

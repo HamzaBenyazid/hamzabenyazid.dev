@@ -1,5 +1,6 @@
 import experiences from "@/data/experiences.json";
 import { Experience } from "@/types";
+import { HiMapPin } from "react-icons/hi2";
 
 const experienceList = experiences as Experience[];
 
@@ -87,8 +88,8 @@ export default function ExperienceSection() {
                           {formatDate(exp.startDate)} →{" "}
                           {formatDate(exp.endDate)}
                         </div>
-                        <div className="text-xs text-text-muted">
-                          📍 {exp.location}
+                        <div className="text-xs text-text-muted flex items-center gap-1">
+                          <HiMapPin className="w-3 h-3" /> {exp.location}
                         </div>
                         {exp.current && (
                           <span className="inline-block mt-1 px-2 py-0.5 rounded-full bg-neon-cyan/10 border border-neon-cyan/20 text-neon-cyan text-xs font-mono">
