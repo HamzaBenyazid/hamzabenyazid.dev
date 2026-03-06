@@ -1,8 +1,14 @@
 import profile from "@/data/profile.json";
 import { HiEnvelope, HiInboxArrowDown, HiMapPin } from "react-icons/hi2";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import social from "@/data/social.json";
 import { SocialLink } from "@/types";
-import SocialIcon from "@/components/SocialIcon";
+import { type IconType } from "react-icons";
+
+const SOCIAL_ICONS: Record<string, IconType> = {
+  github: FaGithub,
+  linkedin: FaLinkedin,
+};
 
 const socialLinks = social as SocialLink[];
 
@@ -22,7 +28,7 @@ export default function Contact() {
 
         {/* Big CTA card */}
         <div className="glass rounded-2xl p-8 sm:p-12 gradient-border glow-purple text-center mb-8">
-          <div className="mb-6 flex justify-center text-neon-purple"><HiInboxArrowDown className="w-14 h-14" /></div>
+          <div className="mb-6 flex justify-center text-neon-cyan"><HiInboxArrowDown className="w-14 h-14" /></div>
           <h3 className="text-2xl sm:text-3xl font-bold text-text-primary mb-4">
             Let&apos;s build something{" "}
             <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
@@ -90,7 +96,7 @@ export default function Contact() {
 
           {/* Location card */}
           <div className="glass rounded-2xl p-6 gradient-border">
-            <div className="mb-3 text-neon-purple"><HiMapPin className="w-7 h-7" /></div>
+            <div className="mb-3 text-neon-cyan"><HiMapPin className="w-7 h-7" /></div>
             <div className="font-mono text-xs text-text-muted mb-1 uppercase tracking-wider">
               Location
             </div>
@@ -100,25 +106,28 @@ export default function Contact() {
           </div>
 
           {/* Social links */}
-          {socialLinks.map((link) => (
-            <a
-              key={link.platform}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass rounded-2xl p-6 gradient-border group hover:glow-cyan transition-all"
-            >
-              <div className="w-10 h-10 rounded-xl bg-surface-raised border border-border-subtle flex items-center justify-center text-text-muted group-hover:text-neon-cyan group-hover:border-neon-cyan/20 transition-all mb-3">
-                <SocialIcon icon={link.icon} />
-              </div>
-              <div className="font-mono text-xs text-text-muted mb-1 uppercase tracking-wider">
-                {link.platform}
-              </div>
-              <div className="text-text-primary group-hover:text-neon-cyan transition-colors text-sm font-medium">
-                {link.username}
-              </div>
-            </a>
-          ))}
+          {socialLinks.map((link) => {
+            const Icon = SOCIAL_ICONS[link.icon];
+            return (
+              <a
+                key={link.platform}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass rounded-2xl p-6 gradient-border group hover:glow-cyan transition-all"
+              >
+                <div className="mb-3 text-neon-cyan">
+                  {Icon && <Icon className="w-7 h-7" />}
+                </div>
+                <div className="font-mono text-xs text-text-muted mb-1 uppercase tracking-wider">
+                  {link.platform}
+                </div>
+                <div className="text-text-primary group-hover:text-neon-cyan transition-colors text-sm font-medium">
+                  {link.username}
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
