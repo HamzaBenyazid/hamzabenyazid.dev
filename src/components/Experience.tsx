@@ -83,7 +83,7 @@ export default function ExperienceSection() {
                           )}
                         </div>
                       </div>
-                      <div className="text-right">
+                      <div className="text-left sm:text-right">
                         <div className="text-xs font-mono text-text-muted">
                           {formatDate(exp.startDate)} →{" "}
                           {formatDate(exp.endDate)}

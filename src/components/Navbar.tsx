@@ -3,6 +3,7 @@ import profile from "@/data/profile.json";
 import social from "@/data/social.json";
 import { SocialLink } from "@/types";
 import SocialIcon from "@/components/SocialIcon";
+import MobileMenu from "@/components/MobileMenu";
 
 const socialLinks = social as SocialLink[];
 
@@ -17,7 +18,7 @@ export default function Navbar() {
           &lt;{profile.name.split(" ")[0].toLowerCase()} /&gt;
         </Link>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 sm:gap-6">
           <div className="hidden sm:flex items-center gap-1 text-xs font-mono">
             {["about", "experience", "projects", "contact"].map((item) => (
               <a
@@ -46,6 +47,8 @@ export default function Navbar() {
               </a>
             ))}
           </div>
+
+          <MobileMenu />
         </div>
       </nav>
     </header>

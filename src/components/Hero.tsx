@@ -11,7 +11,7 @@ export default function Hero() {
       id="hero"
       className="min-h-screen flex items-center justify-center pt-10 relative"
     >
-      <div className="max-w-5xl mx-auto px-6 py-20 w-full">
+        <div className="max-w-5xl mx-auto px-6 py-10 sm:py-20 w-full">
         {/* Terminal-style card */}
         <div className="glass rounded-2xl overflow-hidden glow-cyan animate-fade-in-up">
           {/* Terminal top bar */}
