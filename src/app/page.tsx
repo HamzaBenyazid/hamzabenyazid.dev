@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import ExperienceSection from "@/components/Experience";
 import Projects from "@/components/Projects";
+import GitHubContributions from "@/components/GitHubContributions";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -24,6 +25,7 @@ export default function Home() {
       <About />
       <ExperienceSection />
       <Projects />
+      <GitHubContributions username="HamzaBenyazid" />
       <Contact />
       <Footer />
     </main>
