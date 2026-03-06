@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const NAV_ITEMS = ["about", "experience", "projects", "contact"];
+const NAV_ITEMS = ["about", "experience", "projects", "contributions", "contact"];
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);

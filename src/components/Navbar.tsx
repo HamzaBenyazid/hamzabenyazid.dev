@@ -20,7 +20,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3 sm:gap-6">
           <div className="hidden sm:flex items-center gap-1 text-xs font-mono">
-            {["about", "experience", "projects", "contact"].map((item) => (
+            {["about", "experience", "projects", "contributions", "contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
