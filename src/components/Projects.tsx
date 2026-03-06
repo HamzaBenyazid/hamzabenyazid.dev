@@ -59,7 +59,7 @@ export default function Projects() {
                       )}
                       {project.comingSoon && (
                         <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-cyan whitespace-normal">
-                          <HiClock className="w-3 h-3 shrink-0" /> coming soon to open-source
+                          <HiClock className="w-3 h-3 shrink-0" /> coming soon
                         </span>
                       )}
                       </div>
