@@ -51,15 +51,15 @@ export default function Projects() {
                       <h3 className="text-lg font-semibold text-text-primary group-hover:text-neon-cyan transition-colors">
                         {project.title}
                       </h3>
-                      <div className="flex items-center gap-2">
+                      <div className="flex flex-wrap items-center gap-2">
                       {project.featured && (
                         <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-pink">
                           <HiStar className="w-3 h-3" /> featured
                         </span>
                       )}
                       {project.comingSoon && (
-                        <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-cyan">
-                          <HiClock className="w-3 h-3" /> coming soon to open-source
+                        <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-cyan whitespace-normal">
+                          <HiClock className="w-3 h-3 shrink-0" /> coming soon to open-source
                         </span>
                       )}
                       </div>
