@@ -9,6 +9,15 @@
     "comingSoon": true
   },
   {
+    "id": "proj-8",
+    "title": "Combly Chrome Extension",
+    "description": "A Chrome extension built for Combly, a startup that helps users combine and manage content seamlessly in the browser. Delivers a smooth, integrated browsing experience powered by modern web extension APIs.",
+    "technologies": ["JavaScript", "Chrome Extension API", "HTML", "CSS"],
+    "githubUrl": "https://github.com/Fladeed/Combly-Chrome-Extension",
+    "featured": true,
+    "startup": true
+  },
+  {
     "id": "proj-1",
     "title": "Live Variables",
     "description": "A popular Obsidian plugin with thousands of downloads. Define variables once in your note's frontmatter and reuse them everywhere — with dynamic queries, cross-note sync, and a visual form interface.",
