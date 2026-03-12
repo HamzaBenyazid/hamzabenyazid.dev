@@ -1,7 +1,7 @@
 import Image from "next/image";
 import projects from "@/data/projects.json";
 import { Project } from "@/types";
-import { HiFolderOpen, HiStar, HiClock } from "react-icons/hi2";
+import { HiFolderOpen, HiStar, HiClock, HiRocketLaunch } from "react-icons/hi2";
 
 const projectList = projects as Project[];
 
@@ -60,6 +60,11 @@ export default function Projects() {
                       {project.comingSoon && (
                         <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-cyan whitespace-normal">
                           <HiClock className="w-3 h-3 shrink-0" /> coming soon
+                        </span>
+                      )}
+                      {project.freelance && (
+                        <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-pink">
+                          <HiRocketLaunch className="w-3 h-3" /> freelance
                         </span>
                       )}
                       </div>

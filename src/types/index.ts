@@ -35,6 +35,7 @@ export interface Project {
   image?: string;
   badges?: ProjectBadge[];
   comingSoon?: boolean;
+  freelance?: boolean;
 }
 
 export interface Profile {
