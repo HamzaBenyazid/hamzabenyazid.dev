@@ -62,9 +62,9 @@ export default function Projects() {
                           <HiClock className="w-3 h-3 shrink-0" /> coming soon
                         </span>
                       )}
-                      {project.startup && (
+                      {project.freelance && (
                         <span className="inline-flex items-center gap-1 text-xs font-mono text-neon-pink">
-                          <HiRocketLaunch className="w-3 h-3" /> startup product
+                          <HiRocketLaunch className="w-3 h-3" /> freelance
                         </span>
                       )}
                       </div>

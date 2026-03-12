@@ -11,11 +11,11 @@
   {
     "id": "proj-8",
     "title": "Combly Chrome Extension",
-    "description": "A Chrome extension built for Combly, a startup that helps users combine and manage content seamlessly in the browser. Delivers a smooth, integrated browsing experience powered by modern web extension APIs.",
+    "description": "A Chrome extension developed as a freelance project for Combly, a startup that helps users combine and manage content seamlessly in the browser. Delivers a smooth, integrated browsing experience powered by modern web extension APIs.",
     "technologies": ["JavaScript", "Chrome Extension API", "HTML", "CSS"],
     "githubUrl": "https://github.com/Fladeed/Combly-Chrome-Extension",
     "featured": true,
-    "startup": true
+    "freelance": true
   },
   {
     "id": "proj-1",
