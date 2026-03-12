@@ -12,7 +12,7 @@
     "id": "proj-8",
     "title": "Combly Chrome Extension",
     "description": "A Chrome extension developed as a freelance project for Combly, a startup that helps users combine and manage content seamlessly in the browser. Delivers a smooth, integrated browsing experience powered by modern web extension APIs.",
-    "technologies": ["JavaScript", "Chrome Extension API", "HTML", "CSS"],
+    "technologies": ["JavaScript", "React", "Chrome Extension API", "OpenAI API", "Anthropic API", "Groq API", "HTML", "CSS"],
     "liveUrl": "https://combly.ai/",
     "image": "/projects/combly-logo.png",
     "featured": true,

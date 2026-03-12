@@ -41,7 +41,7 @@ export default function Projects() {
                           alt={project.title}
                           width={40}
                           height={40}
-                          className="object-contain w-full h-full"
+                          className="object-contain w-3/4 h-3/4"
                         />
                       ) : (
                         <HiFolderOpen className="w-5 h-5" />
